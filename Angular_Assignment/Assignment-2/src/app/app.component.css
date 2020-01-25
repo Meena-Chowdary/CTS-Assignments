@@ -1,0 +1,26 @@
+thead,td,table,tr,tfoot{
+    border: 1px solid black;
+    border-style:white;
+    padding: 20px;
+}
+tfoot{
+    text-align: center;
+}
+h1{
+    text-align: center;
+    color:blue;
+}
+h2{
+    text-align: center;
+    color: solid black;
+}
+h3{
+    text-align: center;
+}
+body{
+    background-color: grey;
+}
+.cen{
+    margin-left: auto;
+    margin-right: auto;
+}
