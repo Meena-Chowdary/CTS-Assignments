@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>My New Page 4</title>   
+        <script src="../Script/script3.js"></script>   
+    </head>
+    <body>
+       <h2>Form valdiation example</h2>
+
+       <ul id="errors">
+       </ul>
+
+       <form action="Page1.html" id="regForm" 
+            onsubmit="return validateForm();">
+           <div>
+               <label>Enter User Name: </label>
+               <input type="text" id="unm" />
+           </div>
+           <div>
+                <label>Enter Password: </label>
+                <input type="password" id="pwd1" />
+           </div>
+           <div>
+                <label>Re-Enter Password: </label>
+                <input type="password" id="pwd2" />
+           </div>
+           <div>
+               <label>
+                   <input type="checkbox" id="chk1" /> 
+                   I accept all terms and conditions
+               </label>
+           </div>
+           <button >Register</button>
+       </form>
+    </body>
+</html>
