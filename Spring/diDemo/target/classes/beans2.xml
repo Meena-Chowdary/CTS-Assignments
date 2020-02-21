@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   <bean 
+   id="g1" class="com.cts.sp.service.GreetServiceSimpleImpl"/>
+   
+    <bean 
+   id="g2"
+   class="com.cts.sp.service.GreetServiceEnhancedImpl" scope="prototype">
+ <!--    <property name="greeting" value="Hai"/> -->
+ <constructor-arg index="0" value="Namaskar"></constructor-arg>
+   </bean>
+   
+   <!-- Auto wiring example -->
+   <!-- byType type must be same for property and bean type problem with this is we can have multiple objects for class(both implementations have one super interface where 2obj are there for same interface -->
+   <!-- Comment one obj then will work -->
+   <!-- for byName name of property and id of bean must match and here we can have multiple objects but obj whose id matches will only auto-wired -->
+   <!-- Here name of property and id of one bean are same (gnp) so only that bean gets auto-wired -->
+   <bean
+   id="gnp1" class="com.cts.sp.service.GreetNoteProviderSimpleImpl"/>
+    <bean
+   id="gnp" class="com.cts.sp.service.GreetNoteProviderTimeBasedImpl"/>
+   
+   <bean
+   id="g3" class="com.cts.sp.service.GreetServiceAdvancedImpl" autowire="byName"/>
+   
+   </beans>
